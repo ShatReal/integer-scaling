@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt0eep66xx4cg"]
+
+[ext_resource type="Texture2D" uid="uid://c206gcoc5k8u5" path="res://cyberpunk-street.png" id="1_ghp7p"]
+[ext_resource type="Script" path="res://main.gd" id="2_5o1sn"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_5o1sn")
+
+[node name="Black" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SVC" type="SubViewportContainer" parent="."]
+layout_mode = 1
+stretch = true
+
+[node name="SV" type="SubViewport" parent="SVC"]
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="Background" type="Sprite2D" parent="SVC/SV"]
+texture = ExtResource("1_ghp7p")
+centered = false
