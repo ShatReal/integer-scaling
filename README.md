@@ -1,4 +1,4 @@
-# perfect-pixel-scaling
+# Integer Scaling
 Scales the subviewport only by integers
 
 Avoids those nasty non-square pixels by only scaling the subviewport with whole numbers.
